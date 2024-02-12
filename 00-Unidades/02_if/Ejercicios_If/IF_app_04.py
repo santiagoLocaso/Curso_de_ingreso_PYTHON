@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Santiago
+apellido: Locaso
 ---
 Ejercicio: if_04
 ---
@@ -34,10 +34,57 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        edad = int(self.txt_edad.get())
 
+        if edad > 12 and edad < 18 :
+            alert("mensaje", "es adolescente")
 
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
     app.mainloop()
+
+
+'''
+TIPOS DE DATOS
+
+String de texto
+int numero entero
+float numero decimal
+bool -> true false
+
+
+OPERADORES DE RELACION
+
+ ==   -> si un dato es igual a otro
+ >    -> si un dato es mayor a otro
+ >=   -> si un dato es mayor o igual a otro  
+ <=   -> si un dato es menor o igual a otro
+ <    -> si un dato es menor a otro
+
+
+OPERADORES LOGICOS 
+
+ AND  -> y, ej. si edad > a 12 Y edad < 18
+ OR   -> o
+ NOT  -> no, niega una condicion, 
+
+
+TABLAS DE VERDAD
+
+ AND ->
+    VERDADERO Y VERDADERO  -> VERDADERO
+    VERDADERO Y FALSO      -> FALSO
+    FALSO Y VERDADERO      -> FALSO
+    FALSO Y FALSO          -> FALSO
+
+ OR ->
+    VERDADERO Y VERDADERO  -> VERDADERO
+    VERDADERO Y FALSO      -> VERDADERO
+    FALSO Y VERDADERO      -> VERDADERO
+    FALSO Y FALSO          -> FALSO
+
+ NOT -> si la condicion es verdadera pasa a ser falsa y si es falsa pasa a verdadera 
+    
+    
+'''
