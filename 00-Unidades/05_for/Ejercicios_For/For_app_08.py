@@ -5,13 +5,15 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Santiago
+apellido: Locaso
 ---
 Ejercicio: for_08
 ---
 Enunciado:
-Al presionar el botón 'Mostrar' pedir un número. Mostrar cada número primo entre 1 y el número ingresado, e informar la cantidad de números primos encontrados.
+Al presionar el botón 'Mostrar' pedir un número. 
+Mostrar cada número primo entre 1 y el número ingresado, 
+e informar la cantidad de números primos encontrados.
 '''
 
 class App(customtkinter.CTk):
@@ -26,7 +28,22 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        primo = False
+
+        numero = prompt("","Ingrese un numero")
+        numero = int(numero)
+        contador = 0
+        
+        for j in range(2, numero+1):
+            primo = False
+            for i in range (2, j):
+                if j % i == 0:
+                    primo = True
+                    break
+    
+            if primo == False:
+                contador +=1
+                print(j)
     
 if __name__ == "__main__":
     app = App()
